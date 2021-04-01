@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Update Form</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<div class="container">
+		<form action="{% url 'update' data.id %}" method="POST">
+			<div class="card">
+				<div class="card-header bg-info">Update Form</div>
+				<div class="card-body">
+					{% csrf_token %}
+					{{form.as_p}}
+				</div>
+				<div class="card-footer">
+					<input  class = "btn btn-primary" type="submit" name="submit" value="Update">
+				</div>
+			</div>
+		</form>
+		
+	</div>
+</body>
+</html>

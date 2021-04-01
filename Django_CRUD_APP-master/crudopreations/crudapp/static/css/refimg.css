@@ -1,0 +1,90 @@
+#holder1{
+	height: auto;
+	width: 250px;
+
+
+}
+
+#holder p {
+	border-left:1px solid #333;
+	border-right:1px solid #333;
+	padding:10px 25px;
+	margin-top:5px;
+}
+
+#top1{
+	width:247px;
+	height:35px;
+	border:1px solid #333;
+	margin-top:-340px;
+	margin-left: 420%;
+	background: #CCC;
+	border-radius:0px 10px 0px 10px;
+}
+
+#bottom2{
+	width:245px;
+	height:1px;
+   margin-left: 2%;
+   margin-top: 10%;
+	border:1px solid #333;
+	margin-bottom:30%
+}
+
+/*#airtel img{
+	border-radius: 150px;
+	border:2px solid #333;
+	margin-top:20px;
+	margin-left:20px;
+
+}
+*/
+
+.flip img{ 
+	border-radius: 150px;
+	border:2px solid #333;
+	margin-top:20px;
+	margin-left:20px;
+	}
+.flip > .back img{
+	position:absolute;
+	transform:perspective( 300px ) rotateY( 180deg );
+	 background:#80BFFF; width:50; height:50; border-radius: 7px;
+	 backface-visibility:hidden;
+	-webkit-transition:transform .5s linear 0s;
+}
+
+.flip:hover  img{
+
+	transform:perspective( 300px ) rotateY( -180deg );
+
+}
+.flip:hover .back img{
+
+	transform:perspective( 300px ) rotateY( 0deg );
+}
+.front{
+	margin-left: -4%;
+	margin-top: 5%;
+}
+
+.front2{
+	margin-left:30%;
+	margin-top: -100%;
+}
+.front3{
+	margin-left:30%;
+	margin-top: 5%;
+}
+.front4{
+	margin-left: 65%;
+	margin-top: -100%;
+}
+.front5{
+	margin-left: 65%;
+	margin-top: 5%;
+}
+.front6{
+	margin-left:65%;
+	margin-top:6%;
+}

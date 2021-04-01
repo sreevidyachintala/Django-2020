@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+</head>
+<body>
+    <form action="{% url 'register' %}" method="POST">
+    	{% csrf_token %}
+    	<input type="text" name="firstname" placeholder="enter your name"><br></br>
+    	<input type="email" name="email" placeholder="enter your email"><br></br>
+    	<input type="rollno" name="rollno" placeholder="enter your rollnumber"><br></br>
+    	<button type="submit">Submit</button>
+    </form>
+</body>
+</html>

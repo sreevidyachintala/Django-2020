@@ -1,0 +1,15 @@
+1.  i/p: A P S S D C
+    O/P: Apssdc
+
+2. i/p: Elisala Archana Anusha
+   o/p: E.Archana Anusha
+
+3. i/p: apssdc AP online classes
+   o/p: APSSDC ap ONLINE CLASSEs
+
+4. i/p: python
+   o/p: 
+
+5. print the word which is not ends with vowels
+   i/p: archana apssdc
+   o/p: apssdc

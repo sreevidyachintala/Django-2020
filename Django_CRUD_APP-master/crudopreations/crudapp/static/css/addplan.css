@@ -1,0 +1,62 @@
+body{
+	padding-bottom: 150px;
+}
+.logo img{
+		position: absolute;
+		left: -50px;
+		top:1px;
+		border-radius: 500px;
+	}
+.logo2 img{
+		position: absolute;
+		right:-50px;
+		top:1px;
+		border-radius: 500px;
+}
+
+#mar{
+	
+    color:#FF0000;
+    font: italic bold 10px/22px Georgia, serif;
+}
+
+#nav{
+	background:#CCC;
+	padding-top: 10px;
+	padding-left: 20px;
+	font-size: 20px;
+	border:2px solid #333;
+	margin:auto;
+	height:320px;
+	width:350px;
+	margin-left: 180%;
+	margin-bottom: 30px;
+	border-radius:15px 0px 15px 0px;
+	opacity: .8;
+}
+#nav input{
+	margin-top:5px;
+	font-weight: bold; 
+	height: 30px;
+	font-size: 15px;
+	border-radius: 5px;
+
+}
+#nav input{
+	margin-top:5px;
+	 		
+}
+.butt{
+	background-color:#90EE90; 
+	color:black;
+	margin-left: 30%;
+}
+.butt:hover{
+	color: black;
+	background-color:#FF4500;
+	border-radius: 15px;
+	margin-left: 30%;
+}
+label{
+	font-weight: bold;
+}

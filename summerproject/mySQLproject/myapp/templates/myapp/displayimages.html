@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Displayimages</title>
+</head>
+<body>
+	<table>
+     <thead>
+     	<tr>
+     		<td>FullName</td>
+     		<td>Data</td>
+     	</tr>
+     </thead>
+     <tbody>
+     	{% for row in data %}
+
+			<h3>{{row.fullname}}</h3>
+			<img src="images/{{row.image}}">
+
+			{% endfor %}
+     </tbody>
+			
+	
+		
+	</table>
+
+	
+
+</body>
+</html>

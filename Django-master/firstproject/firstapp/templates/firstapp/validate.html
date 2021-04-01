@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>validation</title>
+</head>
+<body>
+	<form action="{% url 'validation' %}" method="POST">
+		{% csrf_token %}
+		<label for="email">Email</label>
+		<input type="email" name="mail">
+		<label for="password">Password</label>
+		<input type="password" name="pswd">
+		<button type="submit">Signup</button>
+	</form>
+	
+</body>
+</html>

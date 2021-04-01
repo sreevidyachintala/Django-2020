@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Details</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<tbody>
+				{% for info in data %}
+					<tr><td>First Name</td><td>{{ info.id }}</td></tr>
+					<tr><td>Last Name</td><td>{{ info.LastName }}</td></tr>
+					<tr><td>User Name</td><td>{{ info.UserName }}</td></tr>
+					<tr><td>Email</td><td>{{ info.MailId }}</td></tr>
+					<tr><td>Mobile</td><td>{{ info.PhnNum }}</td></tr>
+					<tr><td>Age</td><td>{{ info.Age }}</td></tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+</html>

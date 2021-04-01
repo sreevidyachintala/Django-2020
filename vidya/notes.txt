@@ -1,0 +1,42 @@
+--->Fetching data from database
+--->Using bootsrap
+--->form validations:
+	--->clientside validations
+	   --->for clientside validations we are using 
+		javascript like using patterns or required attribute
+	   --->serverside validations
+		-->we will call a special function 
+--->update:
+	task:User account creation
+	   --->create a new app with your own name
+	   --->model fields
+		-->firstname
+		-->lastname
+		-->username
+		-->mailid
+		-->phonenumber
+		-->age
+	  --->you have to generate register.html
+		-->without password textbox
+	  --->in views.py you have to generate dynamic password for user with lastname@123
+	  --->after registration u can show password to user using HttpResponse
+	  --->login:
+		if username and password is valid then show his details in table format
+
+--->delete:
+	-->Procedure to remove aperticular person based his id
+	-->first we have to check that person id is existed or not in our db
+		ClassName.objects.get(id=id)
+	-->if id is existed
+	-->take conformation from user like are sure to delete
+	   -->if that person conformation is True
+		obj.delete()
+---->Messages:
+	-->in django messages is a model for generating alerts
+	-->for accessing that message we have to mention this statement
+    types of messages:
+	messages.info(request,'your record
+	messages.success
+	messages.warning
+	messages.error
+	messages.debug

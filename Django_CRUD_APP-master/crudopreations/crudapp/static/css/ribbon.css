@@ -1,0 +1,12 @@
+.ribbon{
+	font-size:50px !important;
+	width: 30%;
+	position: relative;
+	background:linear-gradient(10deg,blue 0%,#044 99%);
+	color:#fff;
+	font-style: italic;
+	text-align: center;
+	padding:1em 0em;
+	margin: 1em auto;
+}
+

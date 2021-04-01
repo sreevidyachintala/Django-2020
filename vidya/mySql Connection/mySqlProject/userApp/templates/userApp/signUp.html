@@ -1,0 +1,22 @@
+{% extends 'userApp/header.html' %}
+{% block title %}SignUP Form{% endblock title%}
+{% block content %}
+	<div class="container">
+		<form action="" method="POST">
+			<div class="row col-sm-6 col-md-6" style="justify-content: center;">
+				<div class="card">
+				<div class="card-header">Signup Form</div>
+				<div class="card-body">
+					{% csrf_token %}
+					{{form.as_p}}
+				</div>
+				<div class="card-footer">
+					<input  class = "btn btn-primary" type="submit" name="submit" value="Save">
+			    </div>
+			</div>
+			</div>
+			
+		
+	</form>
+	</div>
+{% endblock content%}

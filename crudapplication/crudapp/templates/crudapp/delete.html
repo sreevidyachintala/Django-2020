@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DeleteForm</title>
+</head>
+<body>
+	<form action="{% url 'delete' info1.id %}" method="POST">
+		{% csrf_token %}
+		<h2>Are you sure to delete {{info1.Fname}}</h2>
+		<input type="submit" name="" name="submit" value="Delete">
+		<a href="{% url 'display' %}" >Cancel</a>
+		
+	</form>
+		
+</body>
+</html>

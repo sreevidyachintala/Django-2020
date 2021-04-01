@@ -1,0 +1,25 @@
+{% extends 'userApp/header.html' %}
+{% block title %}SignUP Form{% endblock title%}
+{% block content %}
+<div class="row justify-content-center">
+	<div class="card">
+		<div class="card-header">LoginForm</div>
+		<div class="card-body">
+
+			<form method="POST" action="">
+			{% csrf_token %}
+			
+			{{form.as_p}}
+			<button  class="btn btn-info" type="submit">Login</button>
+		</form>
+			
+		</div>
+		
+		
+	</div>
+
+	
+	
+</div>
+		
+{% endblock content %}

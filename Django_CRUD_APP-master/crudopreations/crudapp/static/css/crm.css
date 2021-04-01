@@ -1,0 +1,25 @@
+
+#home{ 
+
+    width: 250px;
+    border: 5px solid green;
+    margin: 250px;
+    background-color:#BDB76B;
+    padding-right:5%;
+    
+
+}
+#username{
+padding-top: 3px;
+padding-bottom: 3px;
+}
+#buttons{
+	width:60px;
+	height:30px;
+	background-color:skyblue;
+
+
+}
+#buttons:hover{
+	background-color:red; 
+}

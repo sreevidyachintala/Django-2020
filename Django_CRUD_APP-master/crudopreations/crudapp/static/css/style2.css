@@ -1,0 +1,29 @@
+
+.bdot{
+    border-style:dashed;
+    border-color:green;
+    border-width:2px;
+    }
+
+.my-padding-10 {
+    padding:60px;
+}
+
+.center {
+    margin:0 auto;
+}
+
+.col-md-4 {
+    margin-top: 10px;
+}
+ul li{
+    list-style-type:none;
+
+
+}
+
+.btn:{
+    padding-top:50px;
+    font-color:red;
+    color:red;
+}

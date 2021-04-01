@@ -1,0 +1,251 @@
+21 April 2020
+-----------------------------------------------------------------------------------------
+https://drive.google.com/drive/folders/1JhcihaA0Vw7A313BGd_fugkDKrcHRI0h?usp=sharing
+---------------------------------------------------------------------------------------
+Python OOPS Concepts:
+1. Class:
+	Collection of variables and Methods.
+	Function:Collection of statements.
+	Method:Function is inside the class then it is called method.
+	Syntax:
+	class class_name:
+		vars
+		methods
+	Classname rules:
+	Starts with uppercase
+2. Object:
+	Instance of a class
+	Syntax:
+	object_name = class_name
+2.Constructors
+3.Inheritance
+------------------------------------------------------------------------------------------
+22 April 2020
+-----------------------------------------------------------------------------------------
+Django - Framework for developing web applications.
+MVC Architecture -- Model View Controller
+Split large programs in to sub parts.
+	Model -- Logic related to database only.
+	View -- Logic related to User representations(HTML).
+	Controller -- Build Mail logic for controlling both model and view.
+Django follows MVT Structure.
+	MVT - Model View Template
+	Model storing db connections.
+	view acts as Controller.
+	Template store all html files.
+Installation
+	pip install django
+	pip install django == 2.2.1
+Project Creation
+	choose location
+	version -- django.__version__
+	open cmd prompt from that location
+	create project -- django-admin startprojet <projectname>
+		1.It has two files a folder with same project name
+			__init__.py --> convey somethig to python software to consider the project as a python file.
+			settings.py --> make all project settings.
+			urls.py --> map all our urls.
+						https://mypage.com/register
+			wsgi.py --> 
+		2.manage.py file -- acts as interface between django project and command prompt.(Command Line Utility) && executes dabatabase connections && able to open shells && for creating user applications. 
+	Run the project
+		python manage.py runserver
+	Run the project with server change
+		python manage.py runserver port number(8888)
+	App Creation:
+		python manage.py startapp <appname>
+			Generate new files
+			migrations -- handle all db connections.
+			__init.py__ -- convey somethig to python software to consider the project as a python file.
+			app.py -- here see app info
+			models.py -- write all db connections.
+			tests.py -- used for testing purpose.
+			views.p -- working like controller & controlling all navigations.
+			urls.py -- create urls.py in app also. Intead of navigationg to amin urls used to navigate to our app by using this file.
+		After creating app 
+			register app in settings.py
+HTTP Requests and Responses
+	HTTP Request:
+		two diffrent methods
+			GET(user sends request from url)  and POST
+			GET -- Coming from url
+			POST -- Coming from html files
+	HTTP Response:
+		based on user request it will respond.
+urls.py
+	creating url for path function
+	path with different values
+		path('urlname/',views.function,'nameoftheurl')	
+task
+	create url with name hello
+	show response like hello your name welcome to django project 
+-----------------------------------------------------------------------------------------
+23 April 2020
+------------------------------------------------------------------------------------------
+Dynamic url mapping
+Templates
+	store all HTML files
+	1.In App folder create templates folder
+	2.In templates folder create folder with App name.
+	3.Accessing html files we have to use render function.
+		render(request,'html filename',{optional/data required for html file})
+
+DTL(Django Template language)
+	for printing values use {{ name }}
+	for implementing logics like conditional and looping statements use {% %}
+		{% if condition %}
+
+		{% endif %}
+
+		{% if condition %}
+
+		{% elif %}
+
+		{% else %}
+
+		{% endif %}
+
+	for looping statements
+		{% for i in data %}
+
+		{% endfor %}
+-----------------------------------------------------------------------------------------
+Tasks
+-----------------------------------------------------------------------------------------
+24 April 2020
+-----------------------------------------------------------------------------------------
+Implementing scoreboard task
+static files handling
+	create static folder in app folder.
+		In static -- store css,js and images files
+	Accessing static files
+		define a statement in settings.py in STATIC_URL = 'static'
+	For loading static files
+		define a statement in templates(html files)
+			{% load static %}
+Bootstrap 
+	links directly from bootrap site and paste it in html head.
+	download bootstrap and place those files in static files.
+	crispy same as links 
+-----------------------------------------------------------------------------------------
+25 April 2020
+-----------------------------------------------------------------------------------------
+Sqlite3
+	database like mysql,oracle etc
+	not preferable for developing large applications.
+	without installing any software we use db(stores all data inside harddisk only)
+	accessing sqlite3 install sqlite3 driver(default in python)
+Django Admin -- create tables
+	able to create new user and update existing user.
+	python manage.py migrate
+	Accessing -- create superuser
+	for creating super user python manage.py createsuperuser 
+Models 
+	In app --> we have models.py --> in that we create one or more classes.
+	each and every class will represents a single table.
+	In class each fields match a db column.
+	To convert class to db table we have to run two commands
+		python manage.py makemigrations
+			command will generate a interface file for converting class to db table.
+		python manage.py migrate
+			command will generate tables by using interface.
+------------------------------------------------------------------------------------------------------------
+27 April 2020
+------------------------------------------------------------------------------------------------------------
+for storing we will write sql queries like create,select,insert etc..
+Instead of writing queries will use ORM 
+ORM(Object Relational Mapping) -- by using objects we can access,store data in database.
+	How to insert data
+	How to access data
+	Update and delete data
+
+Data Inserting
+	Insert data using 2 ways
+		1. Using save method
+		obj = Employee(first_name='value'first_name='value,age='value')
+		obj.save()
+		2. Without using save method
+		obj = Employee.pbjects.create()
+		In this there is no need to use save method.
+Procedure of Operations
+	From project location open cmd prompt
+	from that location open python shell
+		run this cmd to connect with employee table
+			from appname.models import table 
+Procedure for retrieving data
+	select query to retrieve data
+		select * from table name
+	In orm classname.objects.all()
+	select first_name,last_name from tablename
+	In orm,class_name.objects.values('first_name','last_name') 
+		return values in dict format
+		To acces items in list use values_list('first_name')
+	Acess specific person details
+		for that sql is:
+			select * from tablename where name = 'ambika'
+	In orm: we have to
+		use 2 different functions those are get() and filter()
+			using get() -- get multiple fields.
+				data = tablename.objects.get(pk=2)
+			filter() -- returns multiple records.
+				data =  tablename.objects.filter(first_name='Ambika')
+-----------------------------------------------------------------------------------------------------------
+29 April 2020
+-----------------------------------------------------------------------------------------------------------
+Include function
+	navigate request from main urls.py(belongs to main project) to apps urls.py(belongs to app)
+		first we have to create urls.py in app
+		for navigating request here i will use include() function,for this include pass 'newapp.urls'
+------------------------------------------------------------------------------------------------------------30 April 2020
+------------------------------------------------------------------------------------------------------------
+fetching data from database
+Using bootstrap 
+form validations
+	client side validations
+		use js like patterns or required attribute
+	Server Side Validations
+		call specific function is_valid()
+Update
+Delete
+------------------------------------------------------------------------------------------------------------
+Assignment -- User Account Creation
+create new app with your own name
+	create model -- model fields -- First Name,last Name,User Name,Password,Mail Id,Phone Number,age
+	create register.html
+		without password textbox
+	In views.py generate dynamic password for user with lastName@123(save 7 fields in database)
+	After Registration u can show password to using by using Http Response.
+	
+	create login form
+		if username and password is valid show his details in table format
+------------------------------------------------------------------------------------------------------------
+01 May 2020
+-----------------------------------------------------------------------------------------------------------
+delete -- To remove partivular preson based on id
+	check that person is existed or not by using classname.objects.get(id=id)
+	if that id is existed 
+		take confirmation from user are sure to delete
+			if confirmation is true then only you have to run delete operation obj.delete()
+------------------------------------------------------------------------------------------------------------02 May 2020
+------------------------------------------------------------------------------------------------------------
+My Sql connections
+	for making mysql connection we have to install mysql drivers
+	pip install mysqlclient
+Image/File uploading
+In settings.py add two statements
+	MEDIA_ROOT = os.path.join(BASE_DIR,'USERaCCOUNT/STATIC/GALLERY')
+	MEDIA_URL = 'gallery/'
+In main urls.py 
+	from django.conf import settings
+	from django.conf.urls.static import static
+
+	if settings.DEBUG:
+		urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+------------------------------------------------------------------------------------------------------------
+05 May 2020
+------------------------------------------------------------------------------------------------------------
+Image Uploading
+Mail sending
+
+	

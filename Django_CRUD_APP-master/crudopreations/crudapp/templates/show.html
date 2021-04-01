@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person Details</title>
+     {% load staticfiles %}
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+    <script src="{% static 'jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+
+</head>
+<body align="center" id="body1">
+    <div class="container mt-5">
+        <h1>Person Details</h1>
+        <table class="table table-bordered table-sm mt-5" border="2" align="center">
+            <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Mobile</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+            </thead>
+    <tbody>
+        {% for p in person %}
+    <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.age }}</td>
+        <td>{{ p.gender }}</td>
+        <td>{{ p.mobile }}</td>
+        <td><a href="/edit/{{p.id}}"><font color="blue">Edit</font></a></td>
+        <td><a href="/delete/{{p.id}}"><font color="blue">Delete</font></a></td>
+    
+    </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+
+<center><a href="/add" class="btn btn-primary">Add New Data</a></center> 
+ 
+</body>
+</html>

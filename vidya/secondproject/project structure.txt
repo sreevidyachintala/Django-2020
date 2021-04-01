@@ -1,0 +1,22 @@
+● second project(project folder)
+|
++---● myapp2 (app folder)
+|   |
+|   +--● migrations (includes files related to migrations)
+|   |  
+|   +--● templates
+|   |  |--● myapp2(app name)
+|   |  |  |--register.html
+|   |  |  |--update.html
+|   |  |  |--delete.html
+|   |  |  |--display.html
+|   | 
+|   |-- models.py
+|   |-- forms.py
+|   |-- urls.py
+|   |-- views.py
+|
++---● secondproject (project folder)
+|   |
+|   |--settings.py 
+|   |--urls.py
